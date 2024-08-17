@@ -34,6 +34,7 @@ def monte_carlo_sampling(g0_tau, U, delta_tau, n_tau, n_warmup=100, n_cycle=1000
     g_up_average = np.zeros((n_tau, n_tau), dtype=complex)
     g_dn_average = np.zeros((n_tau, n_tau), dtype=complex)
 
+    # 初期化
     for l in range(n_tau):
         x_l_prime = np.random.choice([-1, 1])
         x_prime[l] = x_l_prime
